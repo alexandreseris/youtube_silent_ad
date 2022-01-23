@@ -4,7 +4,7 @@
     "name": "Youtube Silent Ad",
     "version": "1.0",
   
-    "description": "mute video ads and skip them when possible. close text and image banner",
+    "description": "Mute video ads and skip them when possible. close text and image banner on Youtube",
   
     "icons": {
       "48": "icons/icon.svg",

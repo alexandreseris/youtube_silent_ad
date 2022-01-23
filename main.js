@@ -2,18 +2,14 @@ if (document.location.host === "www.youtube.com") {
   let currentlyPlayingAd = false
   function loop() {
     setTimeout(() => {
-      console.log("looping")
-
       let banners = Array.from(document.querySelectorAll(".ytp-ad-text-overlay .ytp-ad-overlay-close-container, .ytp-ad-image-overlay .ytp-ad-overlay-close-container"))
       let videoAdBanner = document.querySelector(".ytp-ad-player-overlay-instream-info")
 
       if (banners.length > 0) {
-        console.log("banner ad (text or image) found")
         Array.from(banners).forEach((e) => {e.click()})
       }
 
       if (videoAdBanner !== null) {
-        console.log("video ad found")
         if (!currentlyPlayingAd) {
           document.querySelector("video").muted = true
           currentlyPlayingAd = true
