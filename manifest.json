@@ -2,21 +2,16 @@
 
     "manifest_version": 2,
     "name": "Youtube Silent Ad",
-    "version": "1.0",
-  
-    "description": "Mute video ads and skip them when possible. close text and image banner on Youtube",
-  
+    "version": "2.0",
+    "description": "Mute video ads on Youtube",
     "icons": {
-      "48": "icons/icon.svg",
-      "96": "icons/icon.svg"
+        "48": "icons/icon.svg",
+        "96": "icons/icon.svg"
     },
-  
     "content_scripts": [
-      {
-        "matches": ["*://www.youtube.com/*"],
-        "js": ["main.js"]
-      }
+        {
+            "matches": ["*://www.youtube.com/*"],
+            "js": ["main.js"]
+        }
     ]
-  
-  }
-  
+}

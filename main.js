@@ -7,13 +7,20 @@ if (document.location.host === "www.youtube.com") {
      * @param {MutationObserver} observer 
      */
     function muteAd(mutations, observer) {
-        let adBanner = document.querySelector(".ytp-ad-text")
+        let adBannerOnPage = document.querySelector(".ytp-ad-text") !== null
         let videoPlayer = document.querySelector("video[src^=blob]")
+        let skipAdButon = document.querySelector(".ytp-skip-ad-button")
 
-        if (videoPlayer !== null && adBanner !== null && !addPlaying) {
+        if (skipAdButon !== null) {
+            skipAdButon.click()
+        }
+        if (videoPlayer == null) {
+            return
+        }
+        if (adBannerOnPage && !addPlaying) {
             videoPlayer.muted = true
             addPlaying = true
-        } else if (videoPlayer !== null && adBanner === null && addPlaying) {
+        } else if (!adBannerOnPage && addPlaying) {
             videoPlayer.muted = false
             addPlaying = false
         }

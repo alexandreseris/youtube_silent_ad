@@ -4,12 +4,18 @@
 
 [Addon link](https://addons.mozilla.org/fr/firefox/addon/youtube-silent-ad/)
 
-## Build (using 7z on powershell)
+## Test (using web-ext)
 
-```powershell
-# Put the code, ressources and manifest to a zip file
-rm youtube_silent_ad.zip
-7z a -tzip youtube_silent_ad.zip main.js manifest.json icons/icon.svg
+```sh
+web-ext run --arg="--new-tab=https://www.youtube.com"
+# will start a browser with an empty profile on the youtube home page
+```
+
+## Build (using web-ext)
+
+```sh
+web-ext build
+# zip is under the web-ext-artifacts folder
 ```
 
 Check [firefox doc](https://extensionworkshop.com/documentation/publish/package-your-extension/) if needed
