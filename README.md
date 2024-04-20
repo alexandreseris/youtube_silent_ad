@@ -14,7 +14,7 @@ web-ext run --arg="--new-tab=https://www.youtube.com"
 ## Build (using web-ext)
 
 ```sh
-web-ext build
+web-ext build --overwrite-dest
 # zip is under the web-ext-artifacts folder
 ```
 
