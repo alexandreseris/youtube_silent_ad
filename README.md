@@ -1,5 +1,7 @@
 # youtube_silent_ad
 
+## Does not work anymore, did not find out why yet :(
+
 *Mute video ads and skip them when possible. close text and image banner on Youtube*
 
 [Addon link](https://addons.mozilla.org/fr/firefox/addon/youtube-silent-ad/)
